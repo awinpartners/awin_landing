@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>에이윈파트너스 | 정책자금 전문 컨설팅</title>
+        <link rel="icon" href="images/favicon.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
         <style>
@@ -104,14 +105,19 @@
                 text-decoration: none;
             }
             .nav-logo-mark {
-                width: 40px; height: 40px;
-                border: 1.5px solid var(--gold);
-                border-radius: 8px;
+                width: 40px; height: 40px;               
                 display: flex; align-items: center; justify-content: center;
                 color: var(--gold);
                 font-family: 'Noto Serif KR', serif;
                 font-size: 18px;
                 font-weight: 700;
+                overflow: hidden
+            }
+            .nav-logo-mark img {
+                width: 100%;    /* 부모 박스 너비에 맞춤 */
+                height: 100%;   /* 부모 박스 높이에 맞춤 */
+                object-fit: contain; /* 이미지 비율을 유지하며 박스 안에 꽉 채움 */
+                padding: 2px;   /* 로고가 테두리에 너무 붙어 보이면 수치를 조절하세요 */
             }
             .nav-logo-text {
                 color: var(--white);
@@ -942,21 +948,27 @@
             .footer-brand { max-width: 320px; }
             .footer-logo {
                 display: flex;
-                align-items: center;
-                gap: 10px;
-                margin-bottom: 16px;
+                align-items: center; /* 이미지와 글자를 세로 중앙 정렬 */
+                gap: 12px;           /* 이미지와 글자 사이 간격 */
+                margin-bottom: 24px; /* 아래 설명과의 간격 */
             }
             .footer-logo-mark {
-                width: 36px; height: 36px;
-                border: 1.5px solid var(--gold);
-                border-radius: 7px;
-                display: flex; align-items: center; justify-content: center;
-                color: var(--gold);
-                font-family: 'Noto Serif KR', serif;
-                font-size: 16px;
-                font-weight: 700;
+                width: 32px;         /* 글자 크기와 맞추기 위해 작게 설정 */
+                height: 32px;        /* 가로세로 정비율 */
+                flex-shrink: 0;      /* 주변 글자에 밀려 박스가 작아지지 않게 함 */
+                overflow: hidden;    /* 이미지가 박스 밖으로 나가면 자름 */
+                display: flex;       /* 이미지 중앙 정렬용 */
+                align-items: center;
+                justify-content: center;
             }
-            .footer-logo-name { color: var(--white); font-size: 14px; font-weight: 500; }
+            .footer-logo-mark img {
+                width: 100%;         /* 부모 박스(32px) 너비에 맞춤 */
+                height: 100%;        /* 부모 박스(32px) 높이에 맞춤 */
+                object-fit: contain; /* 이미지 비율 유지하며 박스 안에 맞춤 */
+                padding: 0;          /* 과하게 커 보이던 원인인 여백 제거 */
+                border: none;        /* 혹시 있을지 모를 테두리 제거 */
+            }
+            .footer-logo-name { color: var(--white); font-size: 16px; font-weight: 500; }
             .footer-brand-desc { font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.8; }
             .footer-links-group { display: flex; gap: 60px; }
             .footer-links-title { font-size: 11px; letter-spacing: 2px; color: var(--gold); font-weight: 600; margin-bottom: 16px; }
@@ -1265,7 +1277,9 @@
         <!-- NAV -->
         <nav class="nav">
             <a href="#" class="nav-logo">
-                <div class="nav-logo-mark">A</div>
+                <div class="nav-logo-mark">
+                    <img src="images/logo.png" alt="에이윈파트너스 로고">
+                </div>
                 <div class="nav-logo-text">
                     에이윈파트너스
                     <div class="nav-logo-sub">A-WIN PARTNERS</div>
@@ -1469,33 +1483,27 @@
                 </div>
                 <div class="services-grid">
                     <div class="service-card anim from-bottom delay-1">
-                        <span class="service-icon">🔎</span>
-                        <div class="service-title">정책자금 진단</div>
+                        <span class="service-icon service-title">🔎 정책자금 진단</span>
                         <div class="service-desc">업종·현황에 맞는 운영자금·시설자금·창업자금 방향을 빠르게 정리하고 접근 가능한 우선순위를 선별합니다.</div>
                     </div>
                     <div class="service-card anim from-bottom delay-2">
-                        <span class="service-icon">📋</span>
-                        <div class="service-title">서류 준비 지원</div>
+                        <span class="service-icon service-title">📋 서류 준비 지원</span>
                         <div class="service-desc">필수 서류 목록과 준비 순서, 놓치기 쉬운 보완 포인트까지 체계적으로 안내해 시행착오를 최소화합니다.</div>
                     </div>
                     <div class="service-card anim from-bottom delay-3">
-                        <span class="service-icon">📊</span>
-                        <div class="service-title">사업계획서 전략</div>
+                        <span class="service-icon service-title">📊 사업계획서 전략</span>
                         <div class="service-desc">심사위원이 주목하는 포인트를 중심으로 기업의 강점을 극대화한 사업계획서를 함께 구성합니다.</div>
                     </div>
                     <div class="service-card anim from-bottom delay-1">
-                        <span class="service-icon">🏅</span>
-                        <div class="service-title">기업 인증 컨설팅</div>
+                        <span class="service-icon service-title">🏅 기업 인증 컨설팅</span>
                         <div class="service-desc">이노비즈·메인비즈·벤처인증 등 성장 단계에 맞는 인증 방향을 검토하고, 세제 혜택과 금융 우대 기반을 마련합니다.</div>
                     </div>
                     <div class="service-card anim from-bottom delay-2">
-                        <span class="service-icon">🛡️</span>
-                        <div class="service-title">보증·신용 자금</div>
+                        <span class="service-icon service-title">🛡️ 보증·신용 자금</span>
                         <div class="service-desc">신용보증기금·기술보증기금 연계 보증 자금과 신용 대출 가능성을 함께 진단하고 최적 경로를 제안합니다.</div>
                     </div>
                     <div class="service-card anim from-bottom delay-3">
-                        <span class="service-icon">🔄</span>
-                        <div class="service-title">사후관리 & 추가 전략</div>
+                        <span class="service-icon service-title">🔄 사후관리 & 추가 전략</span>
                         <div class="service-desc">자금 승인 이후 보완 방향과 다음 지원사업·인증 연계 가능성까지 지속적으로 함께 설계합니다.</div>
                     </div>
                 </div>
@@ -1797,7 +1805,9 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <div class="footer-logo-mark">A</div>
+                        <div class="footer-logo-mark">
+                            <img src="images/logo.png" alt="에이윈 파트너스 로고">
+                        </div>
                         <div class="footer-logo-name">에이윈파트너스 | A-WIN PARTNERS</div>
                     </div>
                     <div class="footer-brand-desc">
