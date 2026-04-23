@@ -1668,8 +1668,7 @@
                                     <option>1~3억</option>
                                     <option>3~5억</option>
                                     <option>5~10억</option>
-                                    <option>10~20억</option>
-                                    <option>20억 이상</option>
+                                    <option>10억 이상</option>                                    
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -1992,7 +1991,7 @@
 
         // ── GOOGLE SHEETS FORM SUBMIT ──
         // ▼▼▼ 아래 URL을 Google Apps Script 배포 URL로 교체하세요 ▼▼▼
-        const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx1IU2-FB4qZU-TwNM5GfEYJdw5Gg5GK0XXi7JoRFTIvlfF04t8LNUpNRb82hWFwe9y/exec';
 
         function submitForm() {
             const agree = document.getElementById('f_agree');
@@ -2021,6 +2020,8 @@
                 year: document.getElementById('f_year').value,
                 biztype: document.getElementById('f_biztype').value,
             };
+
+            console.log('Submitting form data:', data);
 
             // Google Sheets 연동 (no-cors 방식)
             fetch(GOOGLE_SCRIPT_URL, {
